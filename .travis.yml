@@ -9,3 +9,9 @@ services: mongodb
 
 before_script: yarn start & sleep 5
 script: yarn test
+
+deploy:
+  provider: heroku
+  api_key:
+    secure: $HEROKU_TOKEN
+  app: danautilus-realworld-example
